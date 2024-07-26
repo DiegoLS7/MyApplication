@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Perfil">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/backside"
+        android:scaleType="center"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:layout_constraintTop_toTopOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#d8000000">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perfil de usuaroi"
+            android:textSize="32sp"
+            android:textColor="@color/design_default_color_primary"
+            android:layout_marginBottom="17dp"/>
+
+        <TextView
+            android:id="@+id/TextViewEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/redondeado"
+            android:padding="6dp"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/material_on_primary_emphasis_medium" />
+
+        <TextView
+            android:id="@+id/TextViewconpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:background="@drawable/redondeado"
+            android:layout_marginBottom="15dp"
+            android:padding="6dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+        <Switch
+            android:id="@+id/swRNotificacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="right"
+            android:switchPadding="10dp"
+            android:text="Quiero recibir notificaciones?"
+            android:textColor="@color/white" />
+
+
+        <Button
+            android:id="@+id/btnMenu"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/redondeado_rojo"
+            android:paddingStart="8dp"
+            android:text="Menu" />
+
+        <Button
+            android:id="@+id/btnSegundario"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnCerrar"
+            android:background="@drawable/redondeado_rojo"
+            android:paddingStart="8dp"
+            android:text="API Mascota " />
+        <Button
+            android:id="@+id/btnCerrar"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/redondeado_rojo"
+            app:layout_constraintBottom_toTopOf="@+id/btnSegundario"
+            android:paddingStart="0dp"
+            android:text="Cerrar sesion " />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
